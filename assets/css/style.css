@@ -2,8 +2,8 @@
     --black: #000;
     --white: #fff;
     --gray: rgb(65, 65, 65);
-    --pad: 32px;
-    --enter: calc(var(--pad)*5);
+    --pad: 64px;
+    --enter: calc(var(--pad)*3);
 }
 
 * {
@@ -27,10 +27,12 @@ html {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: 'Abril fatface',
+        Montserrat;
 }
 
 body {
-    padding: var(--pad);
+    padding: calc(var(--pad) /2) var(--pad);
 }
 
 .nav {
@@ -99,7 +101,7 @@ body {
 }
 
 .hero__head {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .btn-group {
@@ -117,16 +119,12 @@ body {
 }
 
 .hero__bg {
-    position: absolute;
-    top: 30vh;
+    margin-top: 30vh;
     left: 0;
     right: 0;
     bottom: var(--pad);
+    max-height: calc(70vh - var(--pad)/1.2);
     /* background-color: #fff; */
-    background-image: linear-gradient(to bottom,
-        #fff,
-        var(--gray),
-        rgb(24, 60, 107),
-        var(--black));
+    object-fit: cover;
     align-self: flex-end;
 }
