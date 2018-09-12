@@ -1,0 +1,132 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray: rgb(65, 65, 65);
+    --pad: 32px;
+    --enter: calc(var(--pad)*5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+body,
+html {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    padding: var(--pad);
+}
+
+.nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    /* background-color: green; */
+    z-index: 100;
+}
+
+.nav--top {
+    position: fixed;
+}
+
+.brand {
+    width: 100px;
+    height: 40px;
+    /* background-color: #000000; */
+    color: var(--black);
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav__links {
+    display: inline-flex;
+    width: 350px;
+    height: 40px;
+    /* background: #000; */
+    margin-left: var(--enter);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    /* background-color: #Fe0; */
+}
+
+.hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__items {
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    /* background-color: red; */
+    margin-left: calc(var(--enter) + 100px);
+    margin-top: calc(15vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero__head {
+    font-size: 4em;
+}
+
+.btn-group {
+    position: absolute;
+    bottom: 0;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: var(--black);
+    width: 60px;
+    height: 4px;
+    margin-right: var(--pad);
+}
+
+.hero__bg {
+    position: absolute;
+    top: 30vh;
+    left: 0;
+    right: 0;
+    bottom: var(--pad);
+    /* background-color: #fff; */
+    background-image: linear-gradient(to bottom,
+        #fff,
+        var(--gray),
+        rgb(24, 60, 107),
+        var(--black));
+    align-self: flex-end;
+}
