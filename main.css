@@ -1,0 +1,63 @@
+body {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.mp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: green;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.mp__widget {
+    position: fixed;
+    width: 600px;
+    height: 60px;
+    background: #fff;
+}
+
+.mp__progress {
+    width: 100%;
+    height: 4px;
+    background-color: red;
+}
+
+.mp__btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: pink
+}
+
+.mp__songs {
+    margin-top: 80px;
+}
+
+.mp__song {
+    max-width: 100%;
+    height: 40px;
+    background: red;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+}
